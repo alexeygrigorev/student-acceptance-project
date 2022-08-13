@@ -28,3 +28,42 @@ jupyter notebook
 ```
 
 Use the `student-acceptance-project` kernel
+
+
+## Running it locally
+
+Train a model:
+
+```bash
+pipenv run python train.py 
+```
+
+Serve it:
+
+```bash
+pipenv run python serve.py
+```
+
+Send a request:
+
+```bash
+REQUEST='{
+    "type_school": "Academic",
+    "school_accreditation": "A",
+    "gender": "Male",
+    "interest": "Uncertain",
+    "residence": "Rural",
+    "parent_age": 48,
+    "parent_salary": 7160000,
+    "house_area": 71.0,
+    "average_grades": 88.46,
+    "parent_was_in_college": true
+}'
+
+URL="http://localhost:9696/predict"
+
+curl -X POST \
+    -d "${REQUEST}" \
+    -H "Content-Type: application/json" \
+    ${URL}
+```
