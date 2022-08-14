@@ -20,11 +20,11 @@ def predict():
     student = request.get_json()
 
     y_pred = pipeline.predict_proba(student)[0, 1]
-    admission = y_pred >= 0.5
+    acceptance = y_pred >= 0.5
 
     result = {
-        'admission_probability': float(y_pred),
-        'admission': bool(admission)
+        'acceptance_probability': float(y_pred),
+        'acceptance': bool(acceptance)
     }
 
     return jsonify(result)

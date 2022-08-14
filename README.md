@@ -67,3 +67,11 @@ curl -X POST \
     -H "Content-Type: application/json" \
     ${URL}
 ```
+
+
+## Streamlit application
+
+
+```bash
+pipenv run streamlit run front.py
+```
