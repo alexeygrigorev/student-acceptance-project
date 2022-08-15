@@ -139,19 +139,6 @@ col2_pred.write(f"""
 </p>
 """, unsafe_allow_html=True)
 
-st.write(f"""
-```
-REQUEST='{json.dumps(student, indent=4)}'
-
-URL="http://localhost:9696/predict"
-
-curl -X POST \\
-    -d "${{REQUEST}}" \\
-    -H "Content-Type: application/json" \\
-    ${{URL}}
-```
-""")
-
 st.write("""
 This project was done as a part of [the project-of-the-week 
 initiative at DataTalks.Club](https://github.com/DataTalksClub/project-of-the-week/blob/main/2022-08-14-frontend.md).
