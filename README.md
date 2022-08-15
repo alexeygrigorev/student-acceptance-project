@@ -60,3 +60,8 @@ docker run -it --rm \
     student-acceptance-project:v01
 ```
 
+## Cloud
+
+This application is deployed to streamlit cloud:
+
+https://alexeygrigorev-student-acceptance-project-front-bv02me.streamlitapp.com/
